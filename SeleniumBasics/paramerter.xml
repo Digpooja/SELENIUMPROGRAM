@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  
+  <test name="Testing Parameterization">
+		<parameter name="browser" value="chrome" />
+		<parameter name="username" value="admin" />
+		<parameter name="password" value="Test@123" />
+		<classes>
+			<class name="parameterndparellel.parallel" />
+			<methods>
+				<include name="testCaseOne" />
+				<exclude name="testCaseTwo" />
+				<exclude name="testCaseThree" />
+				<include name="testLoginOfVtiger" />
+		</methods>
+		</classes>
+  </test>
+</suite>
